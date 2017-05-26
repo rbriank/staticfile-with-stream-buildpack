@@ -1,0 +1,29 @@
+---
+language: staticfile
+default_versions:
+- name: nginx
+  version: 1.11.13
+exclude_files:
+- ".git/"
+- ".gitignore"
+- ".gitmodules"
+- ".rspec"
+- cf_spec/
+- log/
+- test/
+- buildpack-packager/
+- staticfile_buildpack-*v*.zip
+- pkg/
+- ".envrc"
+- cf.Gemfile
+- cf.Gemfile.lock
+- scripts/
+- src/
+dependencies:
+- name: nginx
+  version: 1.11.13
+  uri: https://github.com/rbriank/nginx-with-stream/raw/master/nginx-1.11.13-with-stream.tgz
+  md5: 4e2716a42b1eb0d585081b47f4043a73
+  cf_stacks:
+  - cflinuxfs2
+pre_package: scripts/build.sh
