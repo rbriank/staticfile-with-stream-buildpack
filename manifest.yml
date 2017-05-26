@@ -23,7 +23,7 @@ dependencies:
 - name: nginx
   version: 1.11.13
   uri: https://github.com/rbriank/nginx-with-stream/raw/master/nginx-1.11.13-with-stream.tgz
-  md5: 437aa4563e1d53c108ca1288e69e5941
+  md5: 7f283851641290ba1cb84a198dd2178c
   cf_stacks:
   - cflinuxfs2
 pre_package: scripts/build.sh
